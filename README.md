@@ -23,12 +23,12 @@ Burgers equation http://www.bcamath.org/projects/NUMERIWAVES/Burgers_Equation_M_
 
 
 ### Tools/Skills Required:
-numpy 
-complex visualization:
-matplotlib.animation as animation
-matplotlib colors
-matplotlib.pyplot 
-plotly
+numpy  
+complex visualization:  
+matplotlib.animation as animation  
+matplotlib colors  
+matplotlib.pyplot   
+plotly.   
 for solving matrix: scipy linalg
 
 
