@@ -48,3 +48,6 @@ Remaining week
 Inviscid Burger’s equation: Lax-Friedrichs
 KdV equation: FTBS for the first two terms, then derive the approximation for $$u_{xxx}$$
 
+```math
+SE = \frac{\sigma}{\sqrt{n}}
+```
