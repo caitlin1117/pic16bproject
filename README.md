@@ -9,7 +9,7 @@ In this project, I want to learn about solving PDEs (with a focus on hyperbolic 
 
 Full success : A Python package that is designed to visualize the solution to some PDES with specified parameters, initial and boundary conditions and finite different method. The PDEs include 1-dimensional advection equation, heat equation, wave equation, and some nonlinear PDEs such as Burger's equation and KdV equation. The methods include explicit and implicit methods. The visualization includes 3d visualization and animation. 
 
-Partial success: will not be able to implement all of the planned methods.
+Partial success: will not be able to implement all of the planned methods or will not be able to implement the method for the KdV equation.
 
 
 ### Resources Required
