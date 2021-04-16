@@ -28,7 +28,7 @@ complex visualization:
 matplotlib.animation as animation  
 matplotlib colors  
 matplotlib.pyplot   
-plotly.   
+plotly  
 for solving matrix: scipy linalg
 
 
