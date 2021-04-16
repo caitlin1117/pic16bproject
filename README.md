@@ -33,8 +33,8 @@ for solving matrix: scipy linalg
 
 
 ### Risks: 
-What are two things that could potentially stop you from achieving the full deliverable above? 
-Even though deriving the different schemes may not be that difficult, analyzing the schemes	 to determine if they are useful approximations to the differential equation is complicated. I probably don’t have enough time to thoroughly look into the convergence and stability analysis. 
+What are two things that could potentially stop you from achieving the full deliverable above?   
+Even though deriving the different schemes may not be that difficult, analyzing the schemes	to determine if they are useful approximations to the differential equation is complicated. I probably don’t have enough time to thoroughly look into the convergence and stability analysis. 
 
 ### Ethics:
 Currently I cannot think of any potential biases or harms from the project. I think if we can try to solve a problem both analytically and numerically, we can gain better insights. When we are using analytical approaches, it would be nice if we can verify our result using numerical approaches.
