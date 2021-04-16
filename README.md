@@ -16,7 +16,7 @@ Partial success: will not be able to implement all of the planned methods.
 The main resources required are textbooks and notes on solving PDEs using finite difference method. Currently, materials I want to use as reference includes:
 Chapter 1, Chapter 6 from Finite difference schemes and partial differential equations by John Strikwerda 
 Numerical solution of partial differential equations by K. W. Morton, D. F. Mayers  
-Lecture notes from http://people.bu.edu/andasari/courses/numericalpython/python.html
+Lecture notes from http://people.bu.edu/andasari/courses/numericalpython/python.html  
 Lecture notes from https://espace.library.uq.edu.au/data/UQ_239427/Lectures_Book.pdf?Expires=1618541682&Key-Pair-Id=APKAJKNBJ4MJBJNC6NLQ&Signature=MT~pUUExCCXmpcg78IGxNd6Mkfbo7k9mAP4-Wo2DLIgiLTYixjwlvvExQ2UJG53vCX54gyXFV0e8njvb4SiVpNj1M7zhZML7l2XVrhkffoT4OWqjb65shSZUJw0g0oLqEUUuTTVzlvznT4GiaL1~ZQP~PpPfblCdj4ylC~6TVjYYEsBIvtkwUBWjY7OMicZFSg-uOVWGsxcFbvVpPfhusIV7kl7VdabC2M03UrzOT29CrcCP0uM3boHUMBwQ~lkqypa7W41Gbytdy61XdRXozcBFH-RczPcQB3rknEUr7DwWtv2BULMQD8qvaq9SFXnTZR1to8bhKJJITV6MtnYmUg__
 KdV Notes https://newtraell.cs.uchicago.edu/files/ms_paper/hmmorgan.pdf
 Burgers equation http://www.bcamath.org/projects/NUMERIWAVES/Burgers_Equation_M_Landajuela.pdf
@@ -48,6 +48,4 @@ Remaining week
 Inviscid Burger’s equation: Lax-Friedrichs
 KdV equation: FTBS for the first two terms, then derive the approximation for $$u_{xxx}$$
 
-```math
-SE = \frac{\sigma}{\sqrt{n}}
-```
+
