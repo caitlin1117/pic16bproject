@@ -14,7 +14,7 @@ Partial success: will not be able to implement all of the planned methods or wil
 
 ### Resources Required
 The main resources required are textbooks and notes on solving PDEs using finite difference method. Currently, materials I want to use as reference includes:  
-Chapter 1, Chapter 6 from Finite difference schemes and partial differential equations by John Strikwerda   
+Chapter 1, 2, 6 from Finite difference schemes and partial differential equations by John Strikwerda   
 Numerical solution of partial differential equations by K. W. Morton, D. F. Mayers    
 Lecture notes from http://people.bu.edu/andasari/courses/numericalpython/python.html  
 Lecture notes from https://espace.library.uq.edu.au/data/UQ_239427/Lectures_Book.pdf?Expires=1618541682&Key-Pair-Id=APKAJKNBJ4MJBJNC6NLQ&Signature=MT~pUUExCCXmpcg78IGxNd6Mkfbo7k9mAP4-Wo2DLIgiLTYixjwlvvExQ2UJG53vCX54gyXFV0e8njvb4SiVpNj1M7zhZML7l2XVrhkffoT4OWqjb65shSZUJw0g0oLqEUUuTTVzlvznT4GiaL1~ZQP~PpPfblCdj4ylC~6TVjYYEsBIvtkwUBWjY7OMicZFSg-uOVWGsxcFbvVpPfhusIV7kl7VdabC2M03UrzOT29CrcCP0uM3boHUMBwQ~lkqypa7W41Gbytdy61XdRXozcBFH-RczPcQB3rknEUr7DwWtv2BULMQD8qvaq9SFXnTZR1to8bhKJJITV6MtnYmUg__  
