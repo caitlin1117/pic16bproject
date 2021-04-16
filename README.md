@@ -40,21 +40,21 @@ Even though deriving the different schemes may not be that difficult, analyzing 
 Currently I cannot think of any potential biases or harms from the project. I think if we can try to solve a problem both analytically and numerically, we can gain better insights. When we are using analytical approaches, it would be nice if we can verify our result using numerical approaches.
 
 ### Tentative Timeline:
-Week2
-1D advection equation 
+Week2  
+1D advection equation   
 Explicit methods: Lax-Friedrichs scheme and Leapfrog scheme (multistep),  Lax-Wendroff scheme
 
-Week4
+Week4  
 Second order 1-d wave equation
 Explicit difference method and Implicit difference method
 
-Week6
-Heat equation
+Week6  
+Heat equation  
 Forward difference in time and central differences in space (FTCS method) explicit method
 Backward-time Central-Space (BTCS method) which is implicit and unconditionally stable
 
-Remaining week
-Inviscid Burger’s equation: Lax-Wendroff  
+Remaining week  
+Inviscid Burger’s equation: Lax-Wendroff   
 KdV equation: FTBS for the first two terms, then derive the approximation for $$u_{xxx}$$
 
 
