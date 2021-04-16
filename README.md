@@ -31,7 +31,7 @@ What are two things that could potentially stop you from achieving the full deli
 
 
 ### Tentative Timeline:
-Week 2
+Week2
 1D advection equation 
 Explicit methods: Lax-Friedrichs scheme and Leapfrog scheme (multistep),  Lax-Wendroff scheme
 
@@ -46,5 +46,5 @@ Backward-time Central-Space (BTCS method) which is implicit and unconditionally 
 
 Remaining week
 Inviscid Burger’s equation: Lax-Friedrichs
-KdV equation: FTBS for the first two terms, then derive the approximation for $$u_xxx$$
+KdV equation: FTBS for the first two terms, then derive the approximation for $$u_{xxx}$$
 
