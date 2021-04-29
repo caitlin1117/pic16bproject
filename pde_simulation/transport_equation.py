@@ -23,7 +23,7 @@ def solution(u_0, pl="animation",save=False):
         if p=="animation":
             p.save('animation.mp4')
         else:
-            savefig(plot) 
+            savefig(p) 
             
     return u
 
