@@ -23,7 +23,7 @@ def solution(u_0, pl="animation",save=False):
         if p=="animation":
             p.save('animation.mp4')
         else:
-            savefig(p) 
+            p.savefig('plot.png') 
             
     return u
 
@@ -125,7 +125,7 @@ def plot(u_0,pl="animation"):
         x, y = np.meshgrid(x, y)
         fig = plt.figure(figsize=(8,8))
         ax = fig.gca(projection='3d')
-            
+        print(u[0:71,:].size)
         ax.plot_surface(x,y, u[0:71,:], rstride=1, cstride=1,
                 cmap='viridis', edgecolor='none')
             
