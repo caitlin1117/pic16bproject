@@ -44,7 +44,9 @@ te.solution(Gaussian_2,"animation")
 ```
 ![](/test/transport_equation.mp4)
 
-
+<video width="640" height="480" controls>
+  <source src="/test/transport_equation.mp4" type="video/mp4">
+</video>
 
 
 
