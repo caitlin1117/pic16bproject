@@ -16,16 +16,14 @@ from IPython.display import HTML
 plt.style.use('seaborn-pastel')
 
 def solution(u_0, pl="animation",save=False):
-    #u = solve(u_0,c)
-    u = solve_wendroff(u_0)
     p = plot(u_0,pl)
     if save:
         if p=="animation":
             p.save('animation.mp4')
         else:
-            savefig(plot) 
+            p.savefig('plot.png') 
             
-    return u
+    return p
 
 def solve(u_0):
     N = 100
@@ -70,22 +68,6 @@ def solve_wendroff(u_0):
 
     return u
     
-'''
-def exact(u_0,c):
-    N = 100
-    tmax = 1.5
-    h = (1 - 0) / 100
-    x = np.linspace(-h, 1+h, 103)
-    u0 = u_0(x)
-    k = 0.009
-    lamda = k/h
-    nsteps = int(tmax/k)
-    u = np.ones((nsteps+1)*103).reshape(nsteps+1, 103)
-    for i in range(1,nsteps):
-        u[i] = u_0(x-c*i*k)
-    
-    return u
-'''
 
 def plot(u_0,pl="animation"):
     #u = solve(u_0)
@@ -108,7 +90,7 @@ def plot(u_0,pl="animation"):
         #line2.set_data(x, state2)
             return
         ani = animation.FuncAnimation(fig, update, frames = 166, interval=60)
-        plt.show()
+        #plt.show()
         return ani
     elif pl=="2d":
         fig = plt.figure(figsize=(5,5))
@@ -117,7 +99,7 @@ def plot(u_0,pl="animation"):
         plt.xlabel('x')
         plt.ylabel('t')
         plt.title('$u_t+u_x=0$ on a periodic domain')
-        plt.show()
+        #plt.show()
         return fig
     else:
         x = np.linspace(-0.01, 1+0.01, 103)
@@ -125,7 +107,7 @@ def plot(u_0,pl="animation"):
         x, y = np.meshgrid(x, y)
         fig = plt.figure(figsize=(8,8))
         ax = fig.gca(projection='3d')
-            
+        print(u[0:71,:].size)
         ax.plot_surface(x,y, u[0:71,:], rstride=1, cstride=1,
                 cmap='viridis', edgecolor='none')
             
@@ -133,7 +115,7 @@ def plot(u_0,pl="animation"):
         ax.set_xlabel('x')
         ax.set_ylabel('t')
         ax.set_zlabel('u');
-        plt.show()
+        #plt.show()
         return fig
     
 

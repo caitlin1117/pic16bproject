@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.1' 
-DESCRIPTION = 'My first Python package'
+VERSION = '0.0.7' 
+DESCRIPTION = 'Numerical simulation of some PDEs using finite difference methods'
 LONG_DESCRIPTION = 'pic16b'
 
 # Setting up
 setup(
        
-        name="pde_simulation", 
+        name="PdeSimulation", 
         version=VERSION,
         author="Yun",
         description=DESCRIPTION,

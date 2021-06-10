@@ -1,0 +1,12 @@
+README.md
+setup.py
+PdeSimulation/__init__.py
+PdeSimulation/burgers.py
+PdeSimulation/heat_equation.py
+PdeSimulation/transport_equation.py
+PdeSimulation/wave_equation.py
+PdeSimulation.egg-info/PKG-INFO
+PdeSimulation.egg-info/SOURCES.txt
+PdeSimulation.egg-info/dependency_links.txt
+PdeSimulation.egg-info/top_level.txt
+test/test.py
