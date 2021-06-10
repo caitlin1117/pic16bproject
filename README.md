@@ -1,86 +1,48 @@
-# pic16bproject
-
-### Abstract
-In this project, I want to learn about solving PDEs (with a focus on hyperbolic and parabolic equations) using finite difference methods and analyze some particular PDEs with different boundary conditions and initial conditions numerically and visualize the solution. We need to implement the numerical methods in python and visualize the numerical solution.
-
-
-
-### Planned Deliverables
-
-Full success : A Python package that is designed to visualize the solution to some PDES with specified initial and boundary conditions and finite difference method. The PDEs include 1-dimensional advection equation, heat equation, wave equation, and some nonlinear PDEs such as Burger's equation and KdV equation. The methods include explicit and implicit methods. The visualization includes 3d visualization and animation. 
-
-Partial success: will not be able to implement all of the planned methods or will not be able to implement the method for the KdV equation.
-
-
-### Resources Required
-The main resources required are textbooks and notes on solving PDEs using finite difference method. Currently, materials I want to use as reference includes:  
-Chapter 1, 2, 6 from Finite difference schemes and partial differential equations by John Strikwerda   
-Numerical solution of partial differential equations by K. W. Morton, D. F. Mayers    
-Lecture notes from http://people.bu.edu/andasari/courses/numericalpython/python.html  
-Lecture notes from https://espace.library.uq.edu.au/data/UQ_239427/Lectures_Book.pdf?Expires=1618541682&Key-Pair-Id=APKAJKNBJ4MJBJNC6NLQ&Signature=MT~pUUExCCXmpcg78IGxNd6Mkfbo7k9mAP4-Wo2DLIgiLTYixjwlvvExQ2UJG53vCX54gyXFV0e8njvb4SiVpNj1M7zhZML7l2XVrhkffoT4OWqjb65shSZUJw0g0oLqEUUuTTVzlvznT4GiaL1~ZQP~PpPfblCdj4ylC~6TVjYYEsBIvtkwUBWjY7OMicZFSg-uOVWGsxcFbvVpPfhusIV7kl7VdabC2M03UrzOT29CrcCP0uM3boHUMBwQ~lkqypa7W41Gbytdy61XdRXozcBFH-RczPcQB3rknEUr7DwWtv2BULMQD8qvaq9SFXnTZR1to8bhKJJITV6MtnYmUg__  
-KdV Notes https://newtraell.cs.uchicago.edu/files/ms_paper/hmmorgan.pdf  
-Burgers equation http://www.bcamath.org/projects/NUMERIWAVES/Burgers_Equation_M_Landajuela.pdf
-
-
-### Tools/Skills Required:
-numpy  
-complex visualization:  
-matplotlib.animation as animation  
-matplotlib colors  
-matplotlib.pyplot   
-plotly  
-for solving matrix: scipy linalg
-
-
-### Risks: 
-What are two things that could potentially stop you from achieving the full deliverable above?   
-Even though deriving the different schemes may not be that difficult, analyzing the schemes	to determine if they are useful approximations to the differential equation is complicated. I probably don’t have enough time to thoroughly look into the convergence and stability analysis. 
-
-### Ethics:
-Currently I cannot think of any potential biases or harms from the project. I think if we can try to solve a problem both analytically and numerically, we can gain better insights. When we are using analytical approaches, it would be nice if we can verify our result using numerical approaches.
-
-### Tentative Timeline:
-Week2  
-1D advection equation   
-Explicit methods: Lax-Friedrichs scheme and Leapfrog scheme (multistep),  Lax-Wendroff scheme
-
-Week4  
-Second order 1-d wave equation
-Explicit difference method and Implicit difference method
-
-Week6  
-Heat equation  
-Forward difference in time and central differences in space (FTCS method) explicit method
-Backward-time Central-Space (BTCS method) which is implicit and unconditionally stable
-
-Remaining week  
-Inviscid Burger’s equation: Lax-Wendroff   
-KdV equation: FTBS for the first two terms, then derive the approximation for $$u_{xxx}$$
+This Python package is designed to help visualize the solution to some PDEs with specified initial conditions. The PDEs include 1d advection equation, 1d and 2d heat equation, 1d and 2d wave equation, and Burger's equation. The numerical solutions are solved using finite difference methods. My intended audience are students who have a little bit knowledge of PDEs. In an introductory PDE course, it can be confusing when you learn about the analytic solution. In order to get a better understanding of how the solution looks like, they can use this package to visualize the solution to some basic PDEs.   
 
 ### Installation:
 ```python
-pip install pde-simulation==0.0.1
+pip install PdeSimulation==0.0.7
 ```
-### Example
-#### Transport Equation
+
+### Example Usage
 ```python
-from pde_simulation import transport_equation as te
+from PdeSimulation import transport_equation as te
+from PdeSimulation import wave_equation as we
+from PdeSimulation import heat_equation as he
+from PdeSimulation import burgers as be
 import numpy as np
-import matplotlib.pyplot as plt
-plt.rcParams['animation.ffmpeg_path'] = '/Users/caitlin/opt/anaconda3/bin/ffmpeg'
-import matplotlib.animation as animation
-from matplotlib import colors
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
-rc('text', usetex=True)
-def f(x):
+
+#initial profiles
+def sine(x):
+    return np.sin(2*x*np.pi)
+def Gaussian(x):
+    return np.exp(-200*(x-0.5)**2)
+def Gaussian_2(x):
     return np.exp(-200*(x-0.25)**2)
-te.solution(f,"animation")
+def Gaussian_2d_1(x,y):
+    return 0.8*np.exp(-700*((x-1)**2+(y-0)**2))
+def Gaussian_2d_2(x,y):
+    return 0.8*np.exp(-700*((x-0.5)**2+(y-0.5)**2))
+def Gaussian_2d_3(x,y):
+    return 0.8*np.exp(-700*((x-1)**2+(y-0)**2))+0.8*np.exp(-700*((x-0)**2+(y-1)**2))
+def f2(x,y):
+    ic01 = np.logical_and(x >= 1/4, x <= 3/4)
+    ic02 = np.logical_and(y >= 1/4, y <= 3/4)
+    return np.multiply(ic01, ic02)
+
 ```
-
-
-
-
+### Transport equation
+Use the solution function    
+Input: (u_0, pl, save)
+u_0: initial condition u(x, 0) = u_0, 
+pl: can be specified to "animation", "2d", or "3d" for different plot, default is animation
+save: specified to True if you want the animation(mp4 file) or figure(png file) saved, default is false
+Output: animation or figure of the solution depending on different kind of plot
+```python
+te.solution(Gaussian_2,"animation") 
+```
+![](/test/transport_equation.mp4)
 
 
 
