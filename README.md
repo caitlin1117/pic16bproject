@@ -33,7 +33,7 @@ def f2(x,y):
 
 ```
 ### Transport equation
-Use the solution function
+Use the `solution` function    
 solve 1d transport equation u_t + u_x = 0 using Lax Wendroff method periodic BCs
 Input: (u_0, pl, save)     
 u_0: initial condition u(x, 0) = u_0,      
@@ -56,7 +56,7 @@ te.solution(Gaussian_2,"3d")
 <img src="/test/transport_equation_3d.png" width="320" height="240"/> 
 
 ### Wave equation
-Use the solution function   
+Use the `solution` function   
 The 1d wave equation u_tt = u_xx in [0,1] is solved using CTCS method, with zero initial velocity and homogeneous Dirichlet BCs    
 The 2d wave equation u_tt = u_xx+u_yy in [0,1]x[0,1] is solved using CTCS method, with zero initial velocity and homogeneous Neumann BCs    
 Input: (u_0, dim, pl, save)    
@@ -94,7 +94,7 @@ we.solution(Gaussian_2d_2,2,"animation")
 
 
 ### Heat Equation
-Use the solution function    
+Use the `solution` function    
 The 1d heat equation u_t = u_xx in [0,1] with homogeneous Dirichlet BCs can be solved   
 using Forward Time Central Space (explicit) or Backward Time Central Space (implicit) methods    
 The 2d heat equation u_t = u_xx+u_yy in [0,1]x[0,1] with homogeneous Neumann BCs is solved using the ADI method   
@@ -134,7 +134,7 @@ he.solution(f2,2)
 <img src="/test/heat_2d.gif" width="320" height="240"/> 
 
 ### Burgers Equation
-Use the solution function   
+Use the `solution` function   
 solve the Riemann problem for the inviscid Burgers equation u_t + uu_x = 0 using upwind conservative method    
 Input: (type, save)   
 type: can be specified to shock or rarefaction   
