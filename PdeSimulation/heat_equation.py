@@ -1,7 +1,3 @@
-'''
-1d heat equation
-ut=uxx x in (0,L)  u(x,0) = I(x) u(0,t) = u(L,t) = 0 
-'''
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import sparse
