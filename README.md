@@ -48,12 +48,12 @@ te.solution(Gaussian_2,"animation")
 ```python
 te.solution(Gaussian_2,"2d") 
 ```
-<img src="/test/transport_eqaution_2d.png" width="320" height="240"/> 
+<img src="/test/transport_equation_2d.png" width="320" height="240"/> 
 
 ```python
 te.solution(Gaussian_2,"3d") 
 ```
-<img src="/test/transport_eqaution_3d.png" width="320" height="240"/> 
+<img src="/test/transport_equation_3d.png" width="320" height="240"/> 
 
 ### Wave equation
 Use the solution function   
