@@ -57,36 +57,5 @@ Remaining week
 Inviscid Burger’s equation: Lax-Wendroff   
 KdV equation: FTBS for the first two terms, then derive the approximation for $$u_{xxx}$$
 
-### Installation:
-```python
-pip install pde-simulation==0.0.1
-```
-### Example
-#### Transport Equation
-```python
-from pde_simulation import transport_equation as te
-import numpy as np
-import matplotlib.pyplot as plt
-plt.rcParams['animation.ffmpeg_path'] = '/Users/caitlin/opt/anaconda3/bin/ffmpeg'
-import matplotlib.animation as animation
-from matplotlib import colors
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
-rc('text', usetex=True)
-def f(x):
-    return np.exp(-200*(x-0.25)**2)
-te.solution(f,"animation")
-```
-
-
-
-
-
-
-
-
-
-
-
 
 
